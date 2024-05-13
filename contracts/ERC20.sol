@@ -29,6 +29,7 @@ contract ERC20 is IERC20 {
     
     // transfer
     function transfer(address to, uint256 amount) external returns(bool) {
+        require(balanceOf[msg.sender] >= amount, "ERC20: transfer amount exceeds balance");
         balanceOf[msg.sender] -= amount;
         balanceOf[to] += amount;
 
