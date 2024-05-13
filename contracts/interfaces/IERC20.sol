@@ -2,6 +2,12 @@
 pragma solidity ^0.8.24;
 
 interface IERC20 {
+
+    // events
+    event Approval(address from, address to, uint256);
+
+    event Transfer(address owner, address spender, uint256 amount);
+
     // name
     function name() external view returns(string);
 
