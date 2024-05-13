@@ -5,11 +5,11 @@ require("@nomicfoundation/hardhat-toolbox");
 module.exports = {
   solidity: "0.8.24",
   networks: {
-    goerli: {
+    sepolia: {
       accounts: {
         mnemonic: process.env.MNEMONIC,
       },
-      url: '<https://rpc.ankr.com/eth_sepolia>',
+      url: "https://rpc.ankr.com/eth_sepolia",
     },
   },
 };
